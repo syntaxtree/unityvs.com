@@ -1,0 +1,158 @@
+---
+layout: default
+title: Visual Studio integration for Unity
+active: index
+---
+<div class="container">
+
+  <div class="hero-unit">
+    <h1>UnityVS is available!</h1>
+    <p>Write and debug your Unity games inside Microsoft Visual Studio.</p>
+  </div>
+
+  <div class="row content-row">
+    <div class="span8">
+      <div id="features-carousel" class="carousel slide rounded">
+        <div class="carousel-inner rounded">
+
+          <div class="item active rounded">
+            <a data-toggle="modal" href="#video"><img alt="" src="/img/intro-slide.jpg" /></a>
+            <div class="carousel-caption">
+              <h4>UnityVS</h4>
+              <p>Design in Unity, develop in Visual Studio.</p>
+            </div>
+          </div>
+
+          <div class="item rounded">
+            <a data-toggle="modal" href="#video"><img alt="" src="/img/debugger.png" /></a>
+            <div class="carousel-caption">
+              <h4>Debugging</h4>
+              <p>UnityVS connects the Visual Studio debugger to Unity. Put breakpoints and evaluate variables.</p>
+            </div>
+          </div>
+
+          <div class="item rounded">
+            <a data-toggle="modal" href="#video"><img alt="" src="/img/syntax-highlight.png" /></a>
+            <div class="carousel-caption">
+              <h4>UnityScript</h4>
+              <p>UnityVS adds support for UnityScript to Visual Studio.</p>
+            </div>
+          </div>
+
+          <div class="item rounded">
+            <a data-toggle="modal" href="#video"><img alt="" src="/img/intellisense.png" /></a>
+            <div class="carousel-caption">
+              <h4>Intellisense</h4>
+              <p>Fast and accurate code completion for your scripts.</p>
+            </div>
+          </div>
+
+          <div class="item rounded">
+            <a data-toggle="modal" href="#video"><img alt="" src="/img/snippets.png" /></a>
+            <div class="carousel-caption">
+              <h4>Code snippets</h4>
+              <p>Quickly expand code structures like functions and field declarations.</p>
+            </div>
+          </div>
+
+          <div class="item rounded">
+            <a data-toggle="modal" href="#video"><img alt="" src="/img/code-navigation.png" /></a>
+            <div class="carousel-caption">
+              <h4>Code navigation</h4>
+              <p>Navigate through the different functions and members of your scripts.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control left" href="#features-carousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#features-carousel" data-slide="next">&rsaquo;</a>
+
+      </div>
+    </div>
+
+    <div class="span4">
+      <div class="row">
+        <div class="span4">
+          <div class="well">
+            Get started: <a href="/pricing/" class="btn" style="margin-left: 10px;">Buy UnityVS Now !</a>
+          </div>
+          <hr/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <center>
+            <div class="span3">
+              <a href="http://unity3d.com" target="_blank"><img src="/img/unity-140.png"></a>
+            </div>
+          </center>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <center>
+            <div class="span3">
+              <a href="http://www.microsoft.com/visualstudio/" target="_blank"><img src="/img/vs-140.jpg"></a>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/bootstrap-transition.js"></script>
+  <script type="text/javascript" src="/js/bootstrap-carousel.js"></script>
+  <script type="text/javascript" src="/js/bootstrap-modal.js"></script>
+
+  <script type="text/javascript">
+    $('#features-carousel').carousel({
+      interval: 5000,
+    });
+  </script>
+
+  <div class="row content-row">
+    <div class="span12">
+{% assign first_post = site.posts.first %}
+      <div class="well">
+        Latest news: <a href="{{ first_post.url }}">{{ first_post.title }}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row content-row">
+    <div class="span3">
+      <h2>Languages</h2>
+      <hr />
+      <p>UnityVS lets you write your scripts in <abbr title="Up to C# 3.5">C#</abbr>, <abbr title="UnityScript is a JavaScript-like language developed for Unity">UnityScript</abbr> and <abbr title="Boo is a fantastic multi-paradigm language">Boo</abbr>. Get <strong>syntax highlighting</strong>, <strong>IntelliSense</strong> and code navigation for your scripts.</p>
+    </div>
+    <div class="span3">
+      <h2>Debugging</h2>
+      <hr />
+      <p>Connect <strong>Visual Studio's debugger</strong> to Unity to debug your scripts. Put <strong>breakpoints</strong>, inspect and modify variables and arguments and <strong>evaluate complex expressions</strong> to fix bugs promptly.</p>
+    </div>
+    <div class="span3">
+      <h2>Launch from VS</h2>
+      <hr />
+      <p>Don't leave your development environment to <strong>launch and debug your scripts</strong>. You just have to press F5.</p>
+    </div>
+    <div class="span3">
+      <h2>Productivity</h2>
+      <hr />
+      <p>UnityVS packs a collection of <strong>productivity features</strong>: code snippets, wizards, tool windows such as the Unity project explorer. UnityVS sends the Unity console directly to Visual Studio.</p>
+    </div>
+  </div>
+
+  <div class="modal hide fade" id="video">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal">x</a>
+      <h3>UnityVS experience - Best viewed in fullscreen</h3>
+    </div>
+    <div class="modal-body">
+      <iframe width="540" height="304" src="https://www.youtube-nocookie.com/embed/YLboxpDdQRQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</div>

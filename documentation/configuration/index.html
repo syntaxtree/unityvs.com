@@ -1,0 +1,41 @@
+---
+layout: default
+title: Configuration
+active: documentation
+---
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="page-header">
+        <h1>Configuration</h1>
+      </div>
+
+      <h3>Choose a target, such as standalone, to allow UnityVS to make Visual Studio and Unity communicate</h3>
+      <br/>
+      <p class="well">Warning, targeting the Web player prevents socket connections, even in the Editor. This prevent us to communicate with Visual Studio to send console messages or open files.</p>
+      <img src="/screen/unity-target.png" />
+      <hr />
+
+      <h3>Import the UnityVS package</h3>
+      <p>You can import it like a standard asset package. It may take a restart of Unity for it to realize there's a new package. You can also import it directly when creating a new project. Alternatively, you can also click on the UnityVS package from the UnityVS folder of your start menu to import it in your project. Until Unity supports global packages, you'll have to do that in every project where you want to use UnityVS.</p>
+
+      <p>You need to make sure you import the package which maps to the Visual Studio version you are using. UnityVS 2010 for Visual Studio 2010, and UnityVS 2012 for Visual Studio 2012.</p>
+
+      <img src="/screen/import-unityvs.png" />
+      <img src="/screen/newproject-unityvs.png" />
+      <img src="/screen/unityvs-package.png" />
+      <img src="/screen/import-package.png" />
+
+      <h3>Open UnityVS from Unity</h3>
+      <p>Alternatively, make sure the UnityVS solution files are generated, and open the solution file whose name starts with UnityVS.</p>
+      <img src="/screen/open-unityvs.png" />
+      <hr />
+
+      <h3>Paste your license</h3>
+      <p>The first time UnityVS is used, it will ask for a license. Simply paste the license you received after you purchase UnityVS.</p>
+      <img src="/screen/vs-new-license.png" />
+      <img src="/screen/vs-license.png" />
+    </div>
+  </div>
+
+</div>

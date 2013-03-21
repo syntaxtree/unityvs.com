@@ -1,0 +1,154 @@
+
+// Links
+@linkColor:         #69AA2A;
+@linkColorHover:    darken(@linkColor, 0);
+
+// Grays
+@black:             #000;
+@grayDark:          lighten(@black, 25%);
+@gray:              lighten(@black, 50%);
+@grayLight:         lighten(@black, 75%);
+@grayLighter:       lighten(@black, 90%);
+@white:             #fff;
+
+// Accent Colors
+@blue:              #049CDB;
+@blueDark:          #0064CD;
+@green:             #46a546;
+@red:               #9d261d;
+@yellow:            #ffc40d;
+@orange:            #f89406;
+@pink:              #c3325f;
+@purple:            #7a43b6;
+
+// Baseline grid
+@basefont:          14px;
+@baseline:          18px;
+
+// Griditude
+// Modify the grid styles in mixins.less
+@gridColumns:       16;
+@gridColumnWidth:   40px;
+@gridGutterWidth:   20px;
+@extraSpace:        (@gridGutterWidth * 2); // For our grid calculations
+@siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// Color Scheme
+// Use this to roll your own color schemes if you like (unused by Bootstrap by default)
+@baseColor:         @blue;                  // Set a base color
+@complement:        spin(@baseColor, 180);  // Determine a complementary color
+@split1:            spin(@baseColor, 158);  // Split complements
+@split2:            spin(@baseColor, -158);
+@triad1:            spin(@baseColor, 135);  // Triads colors
+@triad2:            spin(@baseColor, -135);
+@tetra1:            spin(@baseColor, 90);   // Tetra colors
+@tetra2:            spin(@baseColor, -90);
+@analog1:           spin(@baseColor, 22);   // Analogs colors
+@analog2:           spin(@baseColor, -22);
+
+// More variables coming soon:
+// - @basefont to @baseFontSize
+// - @baseline to @baseLineHeight
+// - @baseFontFamily
+// - @primaryButtonColor
+// - anything else? File an issue on GitHub
+
+// CSS Reset
+@import "reset.less";
+
+// Core variables and mixins
+@import "mixins.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+
+// Styled patterns and elements
+@import "type.less";
+@import "forms.less";
+@import "tables.less";
+@import "patterns.less";
+
+@font-face {
+    font-family: 'VegurLight';
+    src: url('/fonts/vegurl.eot');
+    src: url('/fonts/vegurl.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/vegurl.woff') format('woff'),
+         url('/fonts/vegurl.ttf') format('truetype'),
+         url('/fonts/vegurl.svg#VegurLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VegurRegular';
+    src: url('/fonts/vegurr.eot');
+    src: url('/fonts/vegurr.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/vegurr.woff') format('woff'),
+         url('/fonts/vegurr.ttf') format('truetype'),
+         url('/fonts/vegurr.svg#VegurLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: VegurRegular;
+	font-weight: 400;
+}
+
+.topbar {
+	position: relative;
+	clear:both;
+	padding-bottom: 20px;
+
+	.fill {
+		background-color: #000;
+		#gradient > .vertical(#000, #162b40);
+	}
+
+	.brand {
+		padding: 0 0 0 0px;
+	}
+
+	img {
+		height: 38px;
+		vertical-align: middle;
+	}
+
+	h3 a:hover, .brand:hover, ul .active > a {
+		background-color: transparent;
+	}
+}
+
+.topbar div > ul,
+.nav {
+	.active > a {
+	    background-color: transparent;
+	}
+}
+
+h1, h2, h3, h4 {
+	font-family: VegurLight;
+	font-weight: 400;
+}
+
+.rounded {
+	border-radius: 4px 4px 4px 4px; 
+}
+
+code {
+	background-color: transparent;
+}
+
+.alert-message {
+	&.block-message {
+    	&.info {
+    	  background-color: @grayLighter;
+    	  border-color: @grayLight;
+    	}
+	}
+}
+
+.categorized {
+	padding-top: 8px;
+	margin-bottom: 40px;
+}

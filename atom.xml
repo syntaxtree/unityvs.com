@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>UnityVS News</title>
+  <link href="http://unityvs.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://unityvs.com/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://unityvs.com/</id>
+  <author>
+    <name>UnityVS Team</name>
+    <email>unityvs@syntaxtree.com</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://unityvs.com{{ post.id }}</id>
+    <link href="http://unityvs.com{{ post.url }}"/>
+    <title>{{ post.title | xml_escape }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+ 
+</feed>

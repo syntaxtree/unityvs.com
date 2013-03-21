@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>UnityVS{% if page.title %} - {{ page.title }}{% endif %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8-8" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/css/code.css" />
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Atom feed" />
+  </head>
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand pull-left"> <img src="/img/logo.png" alt="SyntaxTree" /></a>
+          <ul class="nav pull-right">
+            <li{% if page.active == "index"  %} class="active"{% endif %}><a href="/">UnityVS</a></li>
+            <li{% if page.active == "pricing"  %} class="active"{% endif %}><a href="/pricing/">Pricing</a></li>
+            <li{% if page.active == "features"  %} class="active"{% endif %}><a href="/features/">Features</a></li>
+            <li{% if page.active == "roadmap"  %} class="active"{% endif %}><a href="/roadmap/">Roadmap</a></li>
+            <li{% if page.active == "documentation"  %} class="active"{% endif %}><a href="/documentation/">Documentation</a></li>
+            <li{% if page.active == "news"  %} class="active"{% endif %}><a href="/news/">News</a></li>
+            <li{% if page.active == "faq"  %} class="active"{% endif %}><a href="/faq/">F.A.Q.</a></li>
+            <li{% if page.active == "support"  %} class="active"{% endif %}><a href="/support/">Support</a></li>
+            <li><a href="http://app.unityvs.com" target="_blank">Sign in</a></li>
+            <li><a href="http://syntaxtree.com" target="_blank">Company</a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+{{ content }}
+
+    <div class="container">
+      <hr />
+      <div class="row">
+        <div class="span10">
+          <footer>
+            <p>Copyright &copy; 2012 <a href="http://syntaxtree.com">SyntaxTree</a>. All rights reserved.{% if page.active == "pricing"  %}<br/>UnityVS <a href="/eula/"> End User License Agreement</a>.{% endif %}</p>
+            <p>Unity is a registered trademark of Unity Technologies.<br />Visual Studio is a registered trademark of Microsoft Corporation.</p>
+          </footer>
+        </div>
+        <div class="span2">
+          <a href="https://twitter.com/UnityVS" class="twitter-follow-button" data-show-count="false">Follow @UnityVS</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fww.facebook.com%2FUnityVS&amp;send=false&amp;layout=button_count&amp;width=116&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:116px; height:21px;" allowTransparency="true"></iframe>
+        </div>
+      </div>
+    </div>
+  
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29278764-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+layout: default
+title: News
+active: news
+---
+<div class="container">
+{% for post in site.posts limit: 5 %}
+  <div class="page-header">
+    <h1>{{ post.title }}</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>{{ post.date | date_to_string }}</h4>
+      <p><a href="{{ post.url }}">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+{{ post.content }}
+    </div>
+  </div>
+{% endfor %}
+</div>
+<div class="container">
+  <div class="page-header">
+    <h1>Archives</h1>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <ul>
+{% for post in site.posts %}
+        <li>{{ post.date | date_to_string }}: <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
