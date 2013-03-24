@@ -6,6 +6,66 @@ active: documentation
 <div class="container">
 
   <div class="page-header">
+    <a name="1.2"></a>
+    <h1>1.2</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-03-25</h4>
+      <p><a href="/documentation/changelog/#1.2">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Honor the Visual Studio settings to break (or not) on handled and unhandled exceptions.</li>
+        <li>Honor the Visual Studio setting to call ToString on local variables.</li>
+        <li>Add new menu Debug -> Attach Unity debugger, that you can use to debug Unity players.</li>
+        <li>Add new keyboard shortcut CTRL+ALT+M -> CTRL+H to display the Unity documentation for the Unity function or member at the caret position.</li>
+        <li>Take compiler response files (rsp) into account when compiling from Visual Studio.</li>
+        <li>Deconstruct compiler generated types to show variables when debugging generator methods.</li>
+        <li>Simplify the remote debugging by removing the need to configure a shared folder to Unity. Now you just need to have access to your Unity project from Windows.</li>
+        <li>Install a custom Unity profile as a standard .net target profile. This fixes all false positives that ReSharper could show.</li>
+        <li>Work around a Unity scripting engine bug, so the debugger won't break on non properly registered threads.</li>
+        <li>Rework the file opener to avoid a race condition in VS where it claimed to be able to open files, while crashing on the file open request.</li>
+        <li>UnityVS is now asking to refresh the build when VS is building the project, and not on file save anymore.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed our custom .net profile</li>
+        <li>Fixed the theming integration, this fixes our issues with the VS 2012 dark theme.</li>
+        <li>Fixed quick behavior shortcut in VS 2012.</li>
+        <li>Fixed a stepping issue that could happen when debugging and a non main thread would hit a breakpoint.</li>
+        <li>Fixed UnityScript and Boo completion of type aliases, such as int.</i>
+        <li>Fixed exception when writing a new UnityScript or Boo string.</i>
+        <li>Fixed exceptions in Unity menus when a solution was not loaded.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=48" target="_blank">UVS-48</a>: typeing double quote sometimes produce error and break all function (code completion, syntax highlight etc).</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=46" target="_blank">UVS-46</a>: Duplicated opened script file (unityscript) when clicking on the Error List of Visual Studio.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=42" target="_blank">UVS-42</a>: Unity connectivity logo in the status bar don't handle mouse events in VS 2012.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=44" target="_blank">UVS-44</a>: CTRL+SHIFT+Q is not available in VS 2012 for Quick MonoBehaviours.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=40" target="_blank">UVS-40</a>: Selected items in the Unity Project Explorer are unreadable when the window is inactive in VS2012 "dark" theme.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=39" target="_blank">UVS-39</a>: Issue tokenizing escaped strings.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=35" target="_blank">UVS-35</a>: Invoke ToString on objects when inspecting variables
+.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=27" target="_blank">UVS-27</a>: Goto Symbol window inconsistency with "dark" theme in VS2012.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=11" target="_blank">UVS-11</a>: Locals in coroutines.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.1"></a>
+    <h1>1.1</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <p><a href="/documentation/changelog/#1.1">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Beta version</p>
+    </div>
+  </div>
+
+  <div class="page-header">
     <a name="1.0.13"></a>
     <h1>1.0.13</h1>
   </div>
