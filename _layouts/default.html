@@ -14,7 +14,7 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="brand pull-left"> <img src="/img/logo.png" alt="SyntaxTree" /></a>
-		  <div class="nav-collapse nav pull-right">
+          <div class="nav pull-right">
             <ul class="nav">
               <li{% if page.active == "index"  %} class="active"{% endif %}><a href="/">UnityVS</a></li>
               <li{% if page.active == "pricing"  %} class="active"{% endif %}><a href="/pricing/">Pricing</a></li>
@@ -25,8 +25,10 @@
               <li{% if page.active == "support"  %} class="active"{% endif %}><a href="/support/">Support</a></li>
               <li><a href="http://syntaxtree.com" target="_blank">Company</a></li> 
             </ul>
-			<a class="btn btn-small btn-success" href="http://app.unityvs.com">Sign in</a>
-		  </div>
+            <ul class="nav">
+              <li><div><a class="btn btn-small btn-success" href="http://app.unityvs.com">Sign in</a></div></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
