@@ -14,18 +14,19 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="brand pull-left"> <img src="/img/logo.png" alt="SyntaxTree" /></a>
-          <ul class="nav pull-right">
-            <li{% if page.active == "index"  %} class="active"{% endif %}><a href="/">UnityVS</a></li>
-            <li{% if page.active == "pricing"  %} class="active"{% endif %}><a href="/pricing/">Pricing</a></li>
-            <li{% if page.active == "features"  %} class="active"{% endif %}><a href="/features/">Features</a></li>
-            <li{% if page.active == "roadmap"  %} class="active"{% endif %}><a href="/roadmap/">Roadmap</a></li>
-            <li{% if page.active == "documentation"  %} class="active"{% endif %}><a href="/documentation/">Documentation</a></li>
-            <li{% if page.active == "news"  %} class="active"{% endif %}><a href="/news/">News</a></li>
-            <li{% if page.active == "faq"  %} class="active"{% endif %}><a href="/faq/">F.A.Q.</a></li>
-            <li{% if page.active == "support"  %} class="active"{% endif %}><a href="/support/">Support</a></li>
-            <li><a href="http://app.unityvs.com" target="_blank">Sign in</a></li>
-            <li><a href="http://syntaxtree.com" target="_blank">Company</a></li> 
-          </ul>
+		  <div class="nav-collapse nav pull-right">
+            <ul class="nav">
+              <li{% if page.active == "index"  %} class="active"{% endif %}><a href="/">UnityVS</a></li>
+              <li{% if page.active == "pricing"  %} class="active"{% endif %}><a href="/pricing/">Pricing</a></li>
+              <li{% if page.active == "features"  %} class="active"{% endif %}><a href="/features/">Features</a></li>
+              <li{% if page.active == "documentation"  %} class="active"{% endif %}><a href="/documentation/">Documentation</a></li>
+              <li{% if page.active == "news"  %} class="active"{% endif %}><a href="/news/">News</a></li>
+              <li{% if page.active == "faq"  %} class="active"{% endif %}><a href="/faq/">F.A.Q.</a></li>
+              <li{% if page.active == "support"  %} class="active"{% endif %}><a href="/support/">Support</a></li>
+              <li><a href="http://syntaxtree.com" target="_blank">Company</a></li> 
+            </ul>
+			<a class="btn btn-small btn-success" href="http://app.unityvs.com">Sign in</a>
+		  </div>
         </div>
       </div>
     </div>
