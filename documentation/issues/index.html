@@ -12,9 +12,9 @@ active: documentation
 
       <ul>
         <li>When being debugged, Unity's scripting engine is known to crash occasionally. Unity 4 should be more stable in this regard.</li>
-        <li>Sometimes when debugging Unity running on OS X, when stepping, Unity hangs. We're working with Unity to get this fixed.</li>
+        <li>Sometimes when debugging Unity running on OS X, when stepping, Unity can freeze. We're working with Unity to get this fixed.</li>
         <li>Unity can freeze when recompiling scripts while being debugged. It's not really a UnityVS bug, but it can lead to Visual Studio hanging until Unity is closed.</li>
-        <li>When clicking in the Unity Console, UnityVS only open the file that contains the error or warning, but UnityVS doesn't take you to the exact line. This is because Unity currently only gives us the file name, and no line number information. Until we can get the line number as well, there's an and unsupported way to enable them by using <a href="http://github.com/syntaxtree/ufixit">ufixit</a>. Alternatively, you can disable the use of our file opener in Unity by using the UnityVS -> Configuration menu, switch back to MonoDevelop as an external script editor and use the <a href="http://wiki.unity3d.com/index.php/Using_Notepad_Plus_Plus_as_a_script_editor#How_to_make_Notepad.2B.2B_jump_to_the_correct_line_number_from_the_error_console">Unity External Script Editor Helper</a>, which redirects calls to MonoDevelop by pointing it to our file opener with a configuration as follows:
+        <li>When clicking in the Unity Console, UnityVS only open the file that contains the error or warning, but UnityVS doesn't take you to the exact line. This is because Unity currently only gives us the file name, and no line number information. Until we can get the line number as well, there's an unsupported way to enable them by using <a href="http://github.com/syntaxtree/ufixit">ufixit</a>. Alternatively, you can disable the use of our file opener in Unity by using the UnityVS -> Configuration menu, switch back to MonoDevelop as an external script editor and use the <a href="http://wiki.unity3d.com/index.php/Using_Notepad_Plus_Plus_as_a_script_editor#How_to_make_Notepad.2B.2B_jump_to_the_correct_line_number_from_the_error_console">Unity External Script Editor Helper</a>, which redirects calls to MonoDevelop by pointing it to our file opener with a configuration as follows:
           <pre>
 [Settings]
 Application=C:\Program Files (x86)\UnityVS\2012\UnityVS.OpenFile.exe
@@ -33,7 +33,7 @@ Arguments="*file*" *linenumber*
         <h1>What to do when Visual Studio locks up?</h1>
       </div>
 
-      <p>We've had reports that Visual Studio sometimes locks up when debugging. We find it unacceptable. We also need data to help fix those. Here's what you can do to help us whenever Visual Studio is locked up.</p>
+      <p>We've had reports that Visual Studio sometimes locks up when debugging. We find this unacceptable. We need data to help fix those. Here's what you can do to help us whenever Visual Studio is locked up.</p>
 
       <ul>
         <li>Open another Visual Studio instance,</li>
