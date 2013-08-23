@@ -18,14 +18,14 @@ active: documentation
       <p>Bugs fixed:</p>
       <ul>
         <li>Handle fully qualified names in expression evaluator.</li>
-        <li>Fix a freeze related to exception handling where the Unity scripting engine is sending us incorrect stackframe data.</li>
-        <li>Fix build process for Web targets.</li>
-        <li>Fix an error that could happen if Visual Studio was started and that a deleted file was in the list of files to open at startup.</li>
-        <li>Fix UnityVS.OpenFile to handle non script files, like compiled shaders.</li>
+        <li>Fixed a freeze related to exception handling where the Unity scripting engine is sending us incorrect stackframe data.</li>
+        <li>Fixed build process for Web targets.</li>
+        <li>Fixed an error that could happen if Visual Studio was started and that a deleted file was in the list of files to open at startup.</li>
+        <li>Fixed UnityVS.OpenFile to handle non script files, like compiled shaders.</li>
         <li>We now reference Boo.Lang and UnityScript.Lang from all the C# projects.</li>
-        <li>Fix generation of references in projects if the project has special characters.</li>
+        <li>Fixed generation of references in projects if the project has special characters.</li>
         <li>Workaround a VS issue where method calls to disposed projects would trigger multiple NullReferenceException MessageBox.</li>
-        <li>Fix handling of Unity 4.2 Beta assemblies.</li>
+        <li>Fixed handling of Unity 4.2 Beta assemblies.</li>
       </ul>
     </div>
   </div>
@@ -63,7 +63,7 @@ active: documentation
       <p>New features:</p>
       <ul>
         <li>Drastically improved debugger connection speed.</li>
-        <li>Optimized Unity Project Explorer for large projects.</li>
+        <li>Optimized Unity Project Explorer for larger projects.</li>
         <li>Honor the Visual Studio settings to break (or not) on handled and unhandled exceptions.</li>
         <li>Honor the Visual Studio setting to call ToString on local variables.</li>
         <li>Add new menu Debug -> Attach Unity debugger, that you can use to debug Unity players.</li>
@@ -130,7 +130,7 @@ active: documentation
       </ul>
       <p>Bugs fixed:</p>
       <ul>
-        <li>Fixed a Visual Studio lockup that could happen if the target debuggee is sending invalid thread events. Typically that happened when debugging a remote Unity on OSX.</li>
+        <li>Fixed a Visual Studio lockup that could happen if the target debuggee is sending invalid thread events. That would typically happen when debugging a remote Unity on OSX.</li>
         <li>Fixed a Visual Studio lockup that could happen if an exception shuts down the debugger.</li>
         <li>Fixed our MonoBehavior helpers when a C# MonoBehavior is in a namespace.</li>
         <li>Fixed debugger tooltips for UnityScript in Visual Studio 2012.</li>
@@ -188,11 +188,11 @@ active: documentation
       <p>Bugs fixed:</p>
       <ul>
         <li>Fixed regression in the background of the Unity Project Explorer in Visual Studio 2012.</li>
-        <li>Fix project generation for users of the full .net profile.</li>
-        <li>Fix project generation for users of the Web target.</li>
-        <li>Fix project generation to include DEBUG and TRACE compilation symbols as Unity does.</li>
-        <li>Fix crash when using special characters in our Goto Symbol window.</li>
-        <li>Fix crash if we can't inject our icon in Visual Studio's status bar.</li>
+        <li>Fixed project generation for users of the full .net profile.</li>
+        <li>Fixed project generation for users of the Web target.</li>
+        <li>Fixed project generation to include DEBUG and TRACE compilation symbols as Unity does.</li>
+        <li>Fixed crash when using special characters in our Goto Symbol window.</li>
+        <li>Fixed crash if we can't inject our icon in Visual Studio's status bar.</li>
       </ul>
     </div>
   </div>
@@ -281,7 +281,7 @@ active: documentation
         <li>Fixed the translation of pdb symbols on Unity 4.</li>
       </ul>
 
-      <p class="well"><b>Important:</b> because of the Visual Studio 2012 support, we had to rename a few files a move some other around. The UnityVS package to import Unity is now named either UnityVS 2010 or UnityVS 2012, for respectively Visual Studio 2010 and Visual Studio 2012. This version also requires that the UnityVS project files are regenerated.</p>
+      <p class="well"><b>Important:</b> because of the Visual Studio 2012 support, we had to rename a few files and move some other around. The UnityVS package to import Unity is now named either UnityVS 2010 or UnityVS 2012, for respectively Visual Studio 2010 and Visual Studio 2012. This version also requires that the UnityVS project files are regenerated.</p>
     </div>
   </div>
 
