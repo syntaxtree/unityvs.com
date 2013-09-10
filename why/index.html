@@ -6,6 +6,15 @@ active: index
 
 <script src="/js/jquery.js" type="text/javascript"></script>
 <script>
+function urlParam(name) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(location.search);
+  return results == null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 function unitCost(n) {
   if (n <= 0)
     return NaN;
@@ -178,6 +187,17 @@ function computeSaving() {
   </div>
 
 <script>
+function valuesFromParameters(pairs) {
+  for (var i = 0; i < pairs.length; i++) {
+    var pair = pairs[i];
+    var value = urlParam(pair.param);
+    if (value != "")
+      $(pair.id).val(value);
+  }
+}
+
+valuesFromParameters([{param: "yearlyCost", id: "#inputYearlyCost"}, {param: "weeks", id: "#inputWeeks"}, {param: "hours", id: "#inputHours"}, {param: "programmers", id: "#inputProgrammers"}]);
+
 computeSaving();
 
 function bindEvents(inputs) {
