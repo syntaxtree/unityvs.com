@@ -196,7 +196,13 @@ function valuesFromParameters(pairs) {
   }
 }
 
-valuesFromParameters([{param: "yearlyCost", id: "#inputYearlyCost"}, {param: "weeks", id: "#inputWeeks"}, {param: "hours", id: "#inputHours"}, {param: "programmers", id: "#inputProgrammers"}]);
+valuesFromParameters([
+  {param: "yearlyCost", id: "#inputYearlyCost"},
+  {param: "weeks", id: "#inputWeeks"},
+  {param: "hours", id: "#inputHours"},
+  {param: "programmers", id: "#inputProgrammers"},
+  {param: "hoursSaved", id: "#inputHoursSaved"}
+]);
 
 computeSaving();
 
