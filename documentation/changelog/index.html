@@ -6,6 +6,42 @@ active: documentation
 <div class="container">
 
   <div class="page-header">
+    <a name="1.8.0"></a>
+    <h1>1.8.0</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-09-24</h4>
+      <p><a href="/documentation/changelog/#1.8.0">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Drastically improved debugger connection speed.</li>
+        <li>Automatically handle navigation to file and line on Unity 4.2 and above.</li>
+        <li>Conditional breakpoints.</li>
+        <li>Project file generator now handles T4 templates.</li>
+        <li>Update MonBehavior wizardw with new APIs.</li>
+        <li>Intellisense documentation in C# for Unity types.</li>
+        <li>Arithmetic and logical expressions evaluation.</li>
+        <li>Better discovery of remote editors for the remote debugging preview.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed a bug where we would leak a thread in VS after disconnecting the debugger.</li>
+        <li>Fixed a white pixel appearing in VS.</li>
+        <li>Fixed the handling of clicks on the status bar icon.</li>
+        <li>Fixed the generation of references with assemblies in Plugins folders.</li>
+        <li>Fixed creation of sockets from the UnityVS package in case of exceptions.</li>
+        <li>Fixed the detection of new versions of UnityVS.</li>
+        <li>Fixed the prompt of the license manager when the license expired.</li>
+        <li>Fixed a bug that could render the process list empty in the attach debugger to process window of VS.</li>
+        <li>Fixed changing values of booleans in the local view.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
     <a name="1.2.2"></a>
     <h1>1.2.2</h1>
   </div>
