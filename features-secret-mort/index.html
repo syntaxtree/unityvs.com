@@ -5,13 +5,15 @@ active: features
 ---
 
 <script type="text/javascript" src="/screen/debugging_anim.js"></script>
+<script type="text/javascript" src="/screen/errorlist_anim.js"></script>
+<script type="text/javascript" src="/screen/wizard_anim.js"></script>
 <script type="text/javascript">
 var delay_scale = 0.7
-var timer = null
 
 var animate = function(img, timeline, element)
 {
 	var i = 0
+	var timer = null
 
 	var run_time = 0
 	for (var j = 0; j < timeline.length - 1; ++j)
@@ -47,6 +49,7 @@ var animate = function(img, timeline, element)
 var animate_fallback = function(img, timeline, element)
 {
 	var i = 0
+	var timer = null
 
 	var run_time = 0
 	for (var j = 0; j < timeline.length - 1; ++j)
@@ -158,8 +161,15 @@ set_animation("/screen/debugging_packed.png", debugging_timeline, 'debugging_tar
   	  <center>
   	  	<h3>Get the Unity console directly inside Visual Studio.</h3>
   	  </center>
-  	  <img src="/screen/error-list.png" />
+      <div>
+        <canvas id="errorlist_target" class="errorlist_target" width="940" height="300">
+          <div id="errorlist_fallback" class="errorlist_target" style="width: 940px; height: 300px; position: relative;"></div>
+        </canvas>
+      </div>
 
+<script>
+set_animation("/screen/errorlist_packed.png", errorlist_timeline, 'errorlist_target', 'errorlist_fallback');
+</script>
   	  <hr/>
   	</div>
   </div>
@@ -188,7 +198,15 @@ set_animation("/screen/debugging_packed.png", debugging_timeline, 'debugging_tar
   	  <center>
   	  	<h3>Use wizards to quickly create or navigate to scripts.</h3>
   	  </center>
-  	  <img src="/screen/create-script.png" />
+      <div>
+        <canvas id="wizard_target" class="wizard_target" width="940" height="300">
+          <div id="wizard_fallback" class="wizard_target" style="width: 940px; height: 300px; position: relative;"></div>
+        </canvas>
+      </div>
+
+<script>
+set_animation("/screen/wizard_packed.png", wizard_timeline, 'wizard_target', 'wizard_fallback');
+</script>
   	</div>
   </div>
 
