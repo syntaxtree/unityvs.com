@@ -6,6 +6,38 @@ active: documentation
 <div class="container">
 
   <div class="page-header">
+    <a name="1.8.1"></a>
+    <h1>1.8.1</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-11-14</h4>
+      <p><a href="/documentation/changelog/#1.8.1">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Adjusted the MonoBehaviour wizards with Unity 4.3 APIs.</li>
+        <li>MonoBehaviour wizards are filtering Unity APIs depending on the version you use.</li>
+        <li>Add a reference to System.Xml.Linq to the projects for Unity > 4.1.</li>
+        <li>Prettify our calls to Debug.Log to not include the beginning of the stacktrace in the message.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed a bug where we would interfere with the default handling of JavaScript files in Visual Studio.</li>
+        <li>Fixed a white pixel appearing in VS, for real this time.</li>
+        <li>Fixed deletion of the UnityVS.VersionSpecific assembly if it's marked as readonly by a SCM.</li>
+        <li>Fixed exceptions when creating sockets in the UnityVS package.</li>
+        <li>Fixed a crash in Visual Studio when loading stock images from Visual Studio assemblies.</li>
+        <li>Fixed a bug in the generation of the UnityVS.VersionSpecific for source builds of Unity.</li>
+        <li>Fixed a possible freeze when opening a socket in the Unity package.</li>
+        <li>Fixed the handling of Unity project with a dash (-) in their name.</li>
+        <li>Fixed opening scripts from Unity to not confuse the ALT+TAB order for Unity 4.2 and above.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
     <a name="1.8.0"></a>
     <h1>1.8.0</h1>
   </div>
