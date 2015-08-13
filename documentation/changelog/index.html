@@ -1,0 +1,748 @@
+---
+layout: default
+title: ChangeLog
+active: documentation
+---
+<div class="container">
+	
+  <div class="page-header">
+    <a name="2.0"></a>
+    <h1>2.0</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2015-07-20</h4>
+      <p><a href="/documentation/changelog/#2.0">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Debugger: fix a potential freeze when debugging.
+        <li>Debugger: fix an issue where locals would not be displayed in certain stack frames.
+        <li>Debugger: fix inspecting empty arrays.
+        <li>Visual Studio Integration: fix a compatibility issue with the Productivity Power Tools.
+        <li>Visual Studio Integration: fix generating MonoBehaviours around events and delegates declarations.
+        <li>Unity Integration: fixed the conversion of debug symbols created with VS 2015 when importing a dll and its pdb debug symbols.
+        <li>Unity Integration: always generate MDB files when importing a dll and its pdb, except if a mdb debug symbol file is provided as well.
+        <li>Unity Integration: do not pollute the Unity folder with a obj folder.
+        <li>Unity Integration: fixed the generation of references to System.Xml.Linq and System.Runtime.Serialization.
+        <li>Unity Integration: support multiple subscribers to the project file generation API hooks.
+        <li>Unity Integration: complete project generation even if one of the file to generate is locked.
+        <li>Unity Integration: support * patterns in the extension filter when filtering files to be included in the C# projects.
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.9.9"></a>
+    <h1>2.0 Preview 2 (1.9.9)</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2015-04-06</h4>
+      <p><a href="/documentation/changelog/#1.9.9">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Official support for Unity 5.</li>
+        <li>Tools for Unity Options Panel in Visual Studio.</li>
+        <li>Debugger: add ability to use saved and temporary debug targets (See Options dialog).</li>
+        <li>Debugger: add support for function breakpoints.</li>
+        <li>Debugger: add support for Make Object ID.</li>
+        <li>Debugger: add support for hit count on breakpoints.</li>
+        <li>Debugger: add support for breaking on exceptions (See Options dialog).</li>
+        <li>Debugger: add support object and array creation in expression evaluation.</li>
+        <li>Debugger: handle null comparison in expression evaluation.</li>
+        <li>Debugger: filter out Obsolete members in watches.</li>
+        <li>Documentation: improve generation performance.</li>
+        <li>Unity Project Explorer: auto class renaming when renaming file from UPE (See Options dialog).</li>
+        <li>Unity Project Explorer: select new script after creation.</li>
+        <li>Unity Project Explorer: track active script (See Options dialog).</li>
+        <li>Unity Project Explorer: Solution Explorer dual sync (See Options dialog).</li>
+        <li>Unity Project Explorer: use VS stock icons.</li>
+        <li>Wizards: add new Monobehaviour methods from Unity 4.6 and 5.</li>
+        <li>Unity: lookup unsafe flags and custom defines in rsp files for project generation.</li>
+        <li>Installer: optimized VSTU extension registration.</li>
+        <li>Installer: install VSTU package in Unity 5.</li>
+      </ul>
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Debugger: prevent possible VS freeze when evaluating expression.
+        <li>Debugger: fix method invocations to happen on the proper domain.
+        <li>Documentation: fix documentation generation for the new Unity documentation.
+        <li>Project: properly move or rename Unity .meta files when needed (even with folders).
+        <li>Unity Project Explorer: properly refresh after move/rename from the Solution Explorer.
+        <li>Unity Project Explorer: preserve selection when renaming.
+        <li>Unity Project Explorer: prevent auto collapse/expand when double clicking on files.
+        <li>Unity Project Explorer: ensure that a newly selected file is visible.
+        <li>UI: proper VS theme support for context menus and icons.
+        <li>Wizards: fix MonoBehaviour parameters order when generating stubs.
+        <li>Unity Package: fix location of UnityVS.OpenFile with Unity 5.
+        <li>Unity Package: fix location of pdb2mdb with Unity 5.
+        <li>Unity Package: fix possible exception during the generation of project files.
+        <li>Unity Package: fix possible freeze on OSX.
+        <li>Unity Package: fix internal exceptions.
+        <li>Unity Package: fix sending Unity console logs to the VS error list.
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.9.8"></a>
+    <h1>2.0 Preview (1.9.8)</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2014-11-12</h4>
+      <p><a href="/documentation/changelog/#1.9.8">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Support for Visual Studio 2015 Preview.</li>
+        <li>Code Coloration for Unity shaders in Visual Studio 2015 Preview.</li>
+        <li>
+		  Improved visualization of values when debugging:
+		  <ul>
+			<li>Better visualization for ArrayLists, Lists, Hashtables and Dictionaries.</li>
+			<li>Show Non-Public members and Static members as categories in watch and local views.</li>
+			<li>Improved display of Unity's SerializedProperty to only evaluate the value field valid for the property.</li>
+			<li>DebuggerDisplayAttribute support for classes and structs.</li>
+		    <li>DebuggerTypeProxyAttribute support.</li>
+		  </ul>
+		</li>
+		<li>Make the insertion of MonoBehaviour methods using our wizards to respect the user coding conventions.</li>
+		<li>Implement support for Compile Time Text Templates in UnityVS generated projects.</li>
+		<li>Implement support for ResX resources in UnityVS generated projects.</li>
+		<li>Support opening shaders in Visual Studio from Unity.</li>
+      </ul>
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Cleanup sockets before starting the game in Unity after Attach and Play was triggered in Visual Studio. This fixes some issues with the stability of the connection between Unity and VS when using Attach and Play.</li>
+        <li>Avoid calling methods in Unity's scripting engine debugger interface that are prone to freeze Unity. This fixes the Unity freeze when attaching the debugger.</li>
+        <li>Fix displaying of callstacks when no symbols are available.</li>
+        <li>Do not register the log callback if we don't have to.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.9.2"></a>
+    <h1>1.9.2</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2014-10-09</h4>
+      <p><a href="/documentation/changelog/#1.9.2">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Improve detection of Unity players.</li>
+        <li>When using our file opener, make Unity pass the line number as well as the file name.</li>
+        <li>Default to the online Unity documentation if there's no local documentation.</li>
+      </ul>
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Fix potential Unity crash when hitting a breakpoint after a domain reload.</li>
+        <li>Fix exceptions shown in the Unity console when closing our Configuration or About windows, after a domain reload.</li>
+        <li>Fix detection of 64bits Unity running locally.</li>
+        <li>Fix filtering of MonoBehaviours per Unity version in wizards.</li>
+        <li>Fix bug where all assets were included in the project files if the extension filter was empty.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.9.1"></a>
+    <h1>1.9.1</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2014-09-22</h4>
+      <p><a href="/documentation/changelog/#1.9.1">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Optimize binding breakpoint to source locations.</li>
+        <li>Support for overloaded methods in the Expression Evaluation of the debugger.</li>
+        <li>Support for boxing primitives and value types in the Expression Evaluation of the debugger.</li>
+        <li>Support recreating the C# local variables environment when debugging anonymous methods.</li>
+        <li>Delete and rename .meta files when deleting or renaming files from Visual Studio.</li>
+      </ul>
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Fix handling of Visual Studio themes. Previously, dialogs on black themes could appear empty (Connect issues <a href="https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/">#932637</a> and <a href="https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/">#936439</a>).</li>
+        <li>Fix Unity freeze when connecting the debugger while Unity is recompiling (Connect issues <a href="https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/">#947119</a> and <a href="https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/">#969211</a>).</li>
+        <li>Fix breakpoints when debugging remote editors or players compiled on another system.</li>
+        <li>Fix a possible Visual Studio crash when a breakpoint is hit.</li>
+        <li>Fix breakpoints binding to avoid breakpoints showing as unloaded.</li>
+        <li>Fix handling of variable scope in the debugger to avoid live variables that appear out of scope.</li>
+        <li>Fix lookup of static members in the Expression Evaluation of the debugger (Connect issue <a href="https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/">#953379</a>).</li>
+        <li>Fix displaying of types in the Expression Evaluation of the debugger to show static fields and properties.</li>
+        <li>Fix generation of solution when the Unity project names includes special characters that Visual Studio forbids (Connect issue <a href="https://connect.microsoft.com/VisualStudio/feedbackdetail/view/948666/">#948666</a>).</li>
+        <li>Fix the Visual Studio Tools Unity package to immediately stop sending console events after the option has been unchecked (Connect issue <a href="https://connect.microsoft.com/VisualStudio/feedbackdetail/view/933357/">#933357</a>).</li>
+        <li>Fix detection of references to properly regenerate references to new APIs like UnityEngine.UI in the UnityVS generated projects.</li>
+        <li>Fix installer to require that Visual Studio is closed before installation to avoid corrupted installations.</li>
+        <li>Fix installer to install the Unity Reference Assemblies as a proper standalone component, shared between all versions of VSTU.</li>
+        <li>Fix opening scripts with VSTU in 64 bits versions of Unity.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.9"></a>
+    <h1>1.9</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2014-07-29</h4>
+      <p><a href="/documentation/changelog/#1.9">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>In the Attach Unity Debugger window, add the ability to enter a custom IP and port to debug.</li>
+        <li>Add configuration option to set Unity to run in the background or not.</li>
+        <li>Add configuration option to generate solution and project files or project files only.</li>
+        <li>Startup target: choose to Attach to Unity or Attach to Unity and Play.</li>
+        <li>Display of multi-dimensional arrays in the debugger.</li>
+        <li>Handle new Unity Player debugging ports.</li>
+        <li>Handle references to new Unity assemblies like Unity's 4.6 GUI assemblies.</li>
+        <li>Deconstructs closures to properly display local variables when debugging.</li>
+        <li>Deconstructs generated iterators variables into arguments when debugging.</li>
+        <li>Preserve Unity Project Explorer's state after a project reload.</li>
+        <li>Add a command to synchronize the Unity Project Explorer with the current document.</li>
+      </ul>
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Fix conditional breakpoints whose conditions are set before starting the debugger.</li>
+        <li>Fix references to UnityEngine to avoid warnings.</li>
+        <li>Fix parsing versions for Unity betas.</li>
+        <li>Fix issue where variables would not appear in the local variables window when hitting a breakpoint or stepping.</li>
+        <li>Fix variables tooltips in Visual Studio 2013.</li>
+        <li>Fix generation of the IntelliSense documentation for Unity 4.5.</li>
+        <li>Fix the Unity / Visual Studio communication after a domain reload (play/stop in Unity).</li>
+        <li>Fix handling of parts of Visual Studio themes.</li>
+      </ul>
+	  <br/>
+      <p class="well"><b>C# only</b>: C# being the predominant language in the Unity ecosystem - the new Sample Assets are in C#, the Unity documentation will default to C# - we removed our basic support for UnityScript and Boo to better focus on the C# experience. As a result, VSTU solutions are now C# only and are much faster to load.</p>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.8.2"></a>
+    <h1>1.8.2</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2014-01-07</h4>
+      <p><a href="/documentation/changelog/#1.8.2">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Work around an issue in Unity's scripting engine's network layer on Mavericks for remote discovery of editors.</li>
+        <li>Handle new ports to discover remote Unity players.</li>
+        <li>Reference the UnityEngine assembly specific to the current build target.</li>
+        <li>Add setting to filter files to include in generated projects.</li>
+        <li>Add setting to disable sending console logs to Visual Studio error list. This is useful if you're using PlayMaker or Console Pro as there could be only one callback registered in Unity to receive console logs.</li>
+        <li>Add setting to disable the generation of mdb debug symbols. This is useful if you're generating the mdb yourself.</li>
+      </ul>
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Fix a regression when files opened in VS from Unity >= 4.2 would lose IntelliSense.</li>
+        <li>Fix our VS dialogs to handle custom themes.</li>
+        <li>Fix closing the context menu of the UPE.</li>
+        <li>Prevent crash in Unity when the version specific generated assembly if out of sync.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.8.1"></a>
+    <h1>1.8.1</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-11-21</h4>
+      <p><a href="/documentation/changelog/#1.8.1">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Adjusted the MonoBehaviour wizards with Unity 4.3 APIs.</li>
+        <li>MonoBehaviour wizards are filtering Unity APIs depending on the version you use.</li>
+        <li>Add a reference to System.Xml.Linq to the projects for Unity > 4.1.</li>
+        <li>Prettify our calls to Debug.Log to not include the beginning of the stacktrace in the message.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed a bug where we would interfere with the default handling of JavaScript files in Visual Studio.</li>
+        <li>Fixed a white pixel appearing in VS, for real this time.</li>
+        <li>Fixed deletion of the UnityVS.VersionSpecific assembly if it's marked as readonly by a SCM.</li>
+        <li>Fixed exceptions when creating sockets in the UnityVS package.</li>
+        <li>Fixed a crash in Visual Studio when loading stock images from Visual Studio assemblies.</li>
+        <li>Fixed a bug in the generation of the UnityVS.VersionSpecific for source builds of Unity.</li>
+        <li>Fixed a possible freeze when opening a socket in the Unity package.</li>
+        <li>Fixed the handling of Unity project with a dash (-) in their name.</li>
+        <li>Fixed opening scripts from Unity to not confuse the ALT+TAB order for Unity 4.2 and above.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.8.0"></a>
+    <h1>1.8.0</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-09-24</h4>
+      <p><a href="/documentation/changelog/#1.8.0">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Drastically improved debugger connection speed.</li>
+        <li>Automatically handle navigation to file and line on Unity 4.2 and above.</li>
+        <li>Conditional breakpoints.</li>
+        <li>Project file generator now handles T4 templates.</li>
+        <li>Update MonBehavior wizards with new APIs.</li>
+        <li>Intellisense documentation in C# for Unity types.</li>
+        <li>Arithmetic and logical expressions evaluation.</li>
+        <li>Better discovery of remote editors for the remote debugging preview.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed a bug where we would leak a thread in VS after disconnecting the debugger.</li>
+        <li>Fixed a white pixel appearing in VS.</li>
+        <li>Fixed the handling of clicks on the status bar icon.</li>
+        <li>Fixed the generation of references with assemblies in Plugins folders.</li>
+        <li>Fixed creation of sockets from the UnityVS package in case of exceptions.</li>
+        <li>Fixed the detection of new versions of UnityVS.</li>
+        <li>Fixed the prompt of the license manager when the license expired.</li>
+        <li>Fixed a bug that could render the process list empty in the attach debugger to process window of VS.</li>
+        <li>Fixed changing values of booleans in the local view.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.2.2"></a>
+    <h1>1.2.2</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-07-09</h4>
+      <p><a href="/documentation/changelog/#1.2.2">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Handle fully qualified names in expression evaluator.</li>
+        <li>Fixed a freeze related to exception handling where the Unity scripting engine is sending us incorrect stackframe data.</li>
+        <li>Fixed build process for Web targets.</li>
+        <li>Fixed an error that could happen if Visual Studio was started and that a deleted file was in the list of files to open at startup.</li>
+        <li>Fixed UnityVS.OpenFile to handle non script files, like compiled shaders.</li>
+        <li>We now reference Boo.Lang and UnityScript.Lang from all the C# projects.</li>
+        <li>Fixed generation of references in projects if the project has special characters.</li>
+        <li>Workaround a VS issue where method calls to disposed projects would trigger multiple NullReferenceException MessageBox.</li>
+        <li>Fixed handling of Unity 4.2 Beta assemblies.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.2.1"></a>
+    <h1>1.2.1</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-04-09</h4>
+      <p><a href="/documentation/changelog/#1.2.1">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed local deployment of Unity assemblies for code completion in the event of an IO error (such as read-only files, or files locked by Visual Studio).</li>
+        <li>Fixed a regression where opening a script from Unity would not focus the file if it was already opened in Visual Studio.</li>
+        <li>Fixed performance issue of the new exception handling.</li>
+        <li>Fixed binding of breakpoints in some external DLLs.</i>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.2"></a>
+    <h1>1.2</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-03-25</h4>
+      <p><a href="/documentation/changelog/#1.2">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Drastically improved debugger connection speed.</li>
+        <li>Optimized Unity Project Explorer for larger projects.</li>
+        <li>Honor the Visual Studio settings to break (or not) on handled and unhandled exceptions.</li>
+        <li>Honor the Visual Studio setting to call ToString on local variables.</li>
+        <li>Add new menu Debug -> Attach Unity debugger, that you can use to debug Unity players.</li>
+        <li>Preserve custom projects added to the UnityVS solution upon solution file generation.</li>
+        <li>Add new keyboard shortcut CTRL+ALT+M -> CTRL+H to display the Unity documentation for the Unity function or member at the caret position.</li>
+        <li>Take compiler response files (rsp) into account when compiling from Visual Studio.</li>
+        <li>Deconstruct compiler generated types to show variables when debugging generator methods.</li>
+        <li>Simplify the remote debugging by removing the need to configure a shared folder to Unity. Now you just need to have access to your Unity project from Windows.</li>
+        <li>Install a custom Unity profile as a standard .net target profile. This fixes all false positives that ReSharper could show.</li>
+        <li>Work around a Unity scripting engine bug, so the debugger won't break on non properly registered threads.</li>
+        <li>Rework the file opener to avoid a race condition in VS where it claimed to be able to open files, while crashing on the file open request.</li>
+        <li>UnityVS is now asking to refresh the build when VS is building the project, and not on file save anymore.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed our custom .net profile</li>
+        <li>Fixed the theming integration, this fixes our issues with the VS 2012 dark theme.</li>
+        <li>Fixed quick behavior shortcut in VS 2012.</li>
+        <li>Fixed a stepping issue that could happen when debugging and a non main thread would hit a breakpoint.</li>
+        <li>Fixed UnityScript and Boo completion of type aliases, such as int.</i>
+        <li>Fixed exception when writing a new UnityScript or Boo string.</i>
+        <li>Fixed exceptions in Unity menus when a solution was not loaded.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=48" target="_blank">UVS-48</a>: typeing double quote sometimes produce error and break all function (code completion, syntax highlight etc).</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=46" target="_blank">UVS-46</a>: Duplicated opened script file (unityscript) when clicking on the Error List of Visual Studio.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=42" target="_blank">UVS-42</a>: Unity connectivity logo in the status bar don't handle mouse events in VS 2012.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=44" target="_blank">UVS-44</a>: CTRL+SHIFT+Q is not available in VS 2012 for Quick MonoBehaviours.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=40" target="_blank">UVS-40</a>: Selected items in the Unity Project Explorer are unreadable when the window is inactive in VS2012 "dark" theme.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=39" target="_blank">UVS-39</a>: Issue tokenizing escaped strings.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=35" target="_blank">UVS-35</a>: Invoke ToString on objects when inspecting variables
+.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=27" target="_blank">UVS-27</a>: Goto Symbol window inconsistency with "dark" theme in VS2012.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=11" target="_blank">UVS-11</a>: Locals in coroutines.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.1"></a>
+    <h1>1.1</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <p><a href="/documentation/changelog/#1.1">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Beta version</p>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.13"></a>
+    <h1>1.0.13</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-01-21</h4>
+      <p><a href="/documentation/changelog/#1.0.13">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>UnityVS will now warn you in Unity if it can not discuss with Visual Studio.</li>
+        <li>Optimized handling of pending breakpoints. Typically, it will make the debugger load faster when you have placed breakpoints before connecting the debugger.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed a Visual Studio lockup that could happen if the target debuggee is sending invalid thread events. That would typically happen when debugging a remote Unity on OSX.</li>
+        <li>Fixed a Visual Studio lockup that could happen if an exception shuts down the debugger.</li>
+        <li>Fixed our MonoBehavior helpers when a C# MonoBehavior is in a namespace.</li>
+        <li>Fixed debugger tooltips for UnityScript in Visual Studio 2012.</li>
+        <li>Fixed project generation when only debug constants are changed from Unity.</li>
+        <li>Fixed keyboard navigation in the Unity Project Explorer.</li>
+        <li>Fixed UnityScript colorization for escaped strings.</li>
+        <li>Fixed our file opener to guess better the project name when used outside of Unity. That's necessary when the user uses a third part file opener in Unity that delegates to UnityVS.</li>
+        <li>Fixed handling of long messages sent from Unity to UnityVS. Before that, long messages could crash our messaging part of UnityVS. As a consequence, sometimes UnityVS wouldn't open a file from Unity.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.12"></a>
+    <h1>1.0.12</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2013-01-03</h4>
+      <p><a href="/documentation/changelog/#1.0.12">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed Visual Studio lockup that could happen when Visual Studio was deleting a breakpoint.</li>
+        <li>Fixed a bug where some breakpoints would not be hit after Unity recompiled game scripts.</li>
+        <li>Fixed the debugger to properly notify Visual Studio when breakpoints were unbound.</li>
+        <li>Fixed a registration issue that could prevent the Visual Studio debugger to debug native programs.</li>
+        <li>Fixed an exception that could happen when evaluating UnityScript and Boo expressions.</li>
+        <li>Fixed a regression where changing the .net API level in Unity would not trigger an update of the project files.</li>
+        <li>Fixed an API glitch where user code could not participate in the log callback handler.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.11"></a>
+    <h1>1.0.11</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-11-28</h4>
+      <p><a href="/documentation/changelog/#1.0.11">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Official support of Unity 4.</li>
+        <li>Manipulation of scripts from the Unity Project Explorer.</li>
+        <li>Integration in Visual Studio's Navigate To window.</li>
+        <li>Parsing of Info console message, so that clicking in the Error List take you to the first stackframe with symbols.</li>
+        <li>Add an <a href="/documentation/api/project-file-generation">API</a> to let user participate in the project generation.</li>
+        <li>Add an <a href="/documentation/api/log-callback">API</a> to let user participate in the LogCallback.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed regression in the background of the Unity Project Explorer in Visual Studio 2012.</li>
+        <li>Fixed project generation for users of the full .net profile.</li>
+        <li>Fixed project generation for users of the Web target.</li>
+        <li>Fixed project generation to include DEBUG and TRACE compilation symbols as Unity does.</li>
+        <li>Fixed crash when using special characters in our Goto Symbol window.</li>
+        <li>Fixed crash if we can't inject our icon in Visual Studio's status bar.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.10"></a>
+    <h1>1.0.10</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-10-08</h4>
+      <p><a href="/documentation/changelog/#1.0.10">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed the background of the Unity Project Explorer in Visual Studio 2010.</li>
+        <li>Fixed a Visual Studio freeze that could happen if UnityVS tried to attach the debugger to a Unity whose debugger interface previously crashed.</li>
+        <li>Fixed a Visual Studio freeze that could happen when a breakpoint was set and a AppDomain reload would occur.</li>
+        <li>Fixed how assemblies are retrieved from Unity to avoid locking files and confuse the Unity build process.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.9"></a>
+    <h1>1.0.9</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-10-03</h4>
+      <p><a href="/documentation/changelog/#1.0.9">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed project generation when the Unity project includes actual JavaScript assets.</li>
+        <li>Fixed error handling in expression evaluation.</li>
+        <li>Fixed setting new values to fields of value types.</li>
+        <li>Fixed possible side effects when hovering over expressions from the code editor.</li>
+        <li>Fixed how types are searched in loaded assemblies for expression evaluation.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=21">UVS-21: Evaluation of assignment on Unity objects has no effect.</a>.</li>
+        <li>Fixed bug <a href="http://tracker.syntaxtree.com/Issues/IssueDetail.aspx?id=23">UVS-21: Invalid pointer when evaluating a method invocation to Unity Math API.</a>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.8"></a>
+    <h1>1.0.8</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-09-26</h4>
+      <p><a href="/documentation/changelog/#1.0.8">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed the way our script opener acquired the path to the project to be sure that it is able to open both Visual Studio and the scripts.</li>
+        <li>Fixed a bug with breakpoints created while the debugging session was running that could cause Visual Studio to lock up.</li>
+        <li>Fixed how UnityVS is registered on Visual Studio 2010.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.7"></a>
+    <h1>1.0.7</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-09-14</h4>
+      <p><a href="/documentation/changelog/#1.0.7">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>
+          <p>Visual Studio 2012 support.</p>
+        </li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed generation of Editor and Plugins project files to match Unity's behavior.</li>
+        <li>Fixed the translation of pdb symbols on Unity 4.</li>
+      </ul>
+
+      <p class="well"><b>Important:</b> because of the Visual Studio 2012 support, we had to rename a few files and move some other around. The UnityVS package to import Unity is now named either UnityVS 2010 or UnityVS 2012, for respectively Visual Studio 2010 and Visual Studio 2012. This version also requires that the UnityVS project files are regenerated.</p>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.6"></a>
+    <h1>1.0.6</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-09-12</h4>
+      <p><a href="/documentation/changelog/#1.0.6">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Internal build.</p>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.5"></a>
+    <h1>1.0.5</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-09-10</h4>
+      <p><a href="/documentation/changelog/#1.0.5">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed generation of project files when scripts or shaders had an invalid xml character.</li>
+        <li>Fixed detection of Unity instances when Unity was connected to the Asset server. This triggered failures to open files from Unity and the automatic connection of the Visual Studio debugger.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.4"></a>
+    <h1>1.0.4</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-09-05</h4>
+      <p><a href="/documentation/changelog/#1.0.4">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>
+          <p>Automatic conversion of debug symbols in Unity.</p>
+          <p>If you have a .NET .dll assembly with its associated .pdb in your Asset folder, simply re-import the assembly and UnityVS will convert the .pdb into a debug symbols file that Unity's scripting engine understands, and you'll be able to step into your .NET assemblies from UnityVS.</p>
+        </li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed UnityVS crash while debugging caused by exceptions thrown by methods or properties inside Unity.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.3"></a>
+    <h1>1.0.3</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-09-04</h4>
+      <p><a href="/documentation/changelog/#1.0.3">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>New configuration option to disable the usage of UnityVS to open files from Unity.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed generation of references to UnityEditor for non editor projects.</li>
+        <li>Fixed definition of UNITY_EDITOR symbol for non editor projects.</li>
+        <li>Fixed random VS crash caused by our custom status bar.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.2"></a>
+    <h1>1.0.2</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-08-30</h4>
+      <p><a href="/documentation/changelog/#1.0.2">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed conflict with the PythonTools debugger.</li>
+        <li>Fixed references to Mono.Cecil.</li>
+        <li>Fixed bug in how scripting assemblies were retrieved from Unity with Unity 4 b7.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0.1"></a>
+    <h1>1.0.1</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-08-28</h4>
+      <p><a href="/documentation/changelog/#1.0.1">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Preview support for Unity 4.0 Beta.</li>
+      </ul>
+      <p>Bugs fixed:</p>
+      <ul>
+        <li>Fixed the inspection of properties throwing exceptions.</li>
+        <li>Fixed descending into base objects when inspecting objects.</li>
+        <li>Fixed blank dropdown list for the insertion point in the MonoBehavior wizard.</li>
+        <li>Fixed completion for dll inside the Asset folder for UnityScript and Boo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <a name="1.0"></a>
+    <h1>1.0</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2012-08-22</h4>
+      <p><a href="/documentation/changelog/#1.0">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>Initial release.</p>
+    </div>
+  </div>
+
+</div>

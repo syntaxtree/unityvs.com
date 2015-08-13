@@ -1,0 +1,223 @@
+---
+layout: default
+title: Why your team should use UnityVS
+active: index
+---
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script>
+function urlParam(name) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  var results = regex.exec(location.search);
+  return results == null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function unitCost(n) {
+  if (n <= 0)
+    return NaN;
+
+  if (n > 0 && n < 10)
+    return 249;
+  else if (n >= 10 && n < 20)
+    return 237;
+  else if (n >= 20 && n < 30)
+    return 224;
+  else if (n >= 30 && n < 40)
+    return 212;
+  else if (n >= 40)
+    return 200;
+}
+
+function round2(n) {
+  return n.toFixed(2);
+}
+
+function prettify(n) {
+  if (isNaN(n) || n == Infinity)
+    return "";
+  return n.toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function computeSaving() {
+  var yearlyCost = $('#inputYearlyCost').val();
+  var workedWeeks = $('#inputWeeks').val();
+  var workedHours = $('#inputHours').val();
+
+  var hoursWorkedYearly = workedWeeks * workedHours;
+
+  var programmers = $('#inputProgrammers').val();
+
+  var hourlyCost = round2(yearlyCost / hoursWorkedYearly);
+  $('#hourCost').val(prettify(hourlyCost));
+
+  var savingPerWeekPerProgrammer = $('#inputHoursSaved').val() * hourlyCost;
+  var savingPerYearPerProgrammer = savingPerWeekPerProgrammer * workedWeeks;
+  var savingPerYear = savingPerYearPerProgrammer * programmers;
+
+  var yearlySaving = round2(savingPerYear);
+  var uvsCost = round2(unitCost(programmers) * programmers);
+  var totalSaving = round2(yearlySaving - uvsCost);
+
+  $('#yearlySaving').val(prettify(yearlySaving));
+  $('#uvsCost').val(prettify(uvsCost));
+  $('#totalSaving').val(prettify(totalSaving));
+
+  $('#totalSavingSpan').text("$" + prettify(totalSaving));
+}
+</script>
+
+<div class="container">
+
+  <div class="row">
+    <div class="span12">
+      <div class="page-header">
+        <h1>Why your team should use UnityVS</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <form class="form-horizontal">
+
+        <div class="control-group">
+          <label class="control-label">Yearly cost</label>
+          <div class="controls">
+            <input type="text" id="inputYearlyCost" value="120000"/>
+            <span class="help-block" style="margin-left: 10px">Average yearly cost of a programmer, including salary and cost of employment.</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Worked weeks</label>
+          <div class="controls">
+            <input type="text" id="inputWeeks" value="49"/>
+            <span class="help-block" style="margin-left: 10px">How many weeks a programmer works a year. A year has 52 weeks.</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Worked hours /w</label>
+          <div class="controls">
+            <input type="text" id="inputHours" value="40"/>
+            <span class="help-block" style="margin-left: 10px">How many hours a week a programmer works.</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Hourly cost /y <i class="icon-arrow-right"></i></label>
+          <div class="controls">
+            <input type="text" id="hourCost" readonly/>
+            <span class="help-block" style="margin-left: 10px">The cost of one hour of programmer time.</span>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="control-group">
+          <label class="control-label">Programmers</label>
+          <div class="controls">
+            <input type="text" id="inputProgrammers" value="6"/>
+            <span class="help-block" style="margin-left: 10px">How many programmers are working in the team.</span>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="control-group">
+          <label class="control-label">Hours saved /w</label>
+          <div class="controls">
+            <input type="text" id="inputHoursSaved" value="5"/>
+            <span class="help-block" style="margin-left: 10px">The number of hours saved per week per programmer by using UnityVS.
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="control-group">
+          <label class="control-label">Saving /y <i class="icon-arrow-right"></i></label>
+          <div class="controls">
+            <input type="text" id="yearlySaving" readonly/>
+            <span class="help-block" style="margin-left: 10px">How much is saved per year by UnityVS.</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">UnityVS cost <i class="icon-arrow-right"></i></label>
+          <div class="controls">
+            <input type="text" id="uvsCost" readonly/>
+            <span class="help-block" style="margin-left: 10px">How much UnityVS costs for your team.</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Total saving /y <i class="icon-arrow-right"></i></label>
+          <div class="controls">
+            <input type="text" id="totalSaving" readonly/>
+            <span class="help-block" style="margin-left: 10px">How much you save yearly.</span>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="alert alert-success">By using UnityVS to improve the workflow of your team, you can save up to <b><span id="totalSavingSpan"></span></b> anually!</div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="row content-row">
+    <div class="span4">&nbsp;</div>
+    <div class="span2">
+      <p><center><a href="/pricing" class="btn btn-success">Buy UnityVS</a></center></p>
+    </div>
+    <div class="span2">
+      <p><center><a href="http://app.unityvs.com/trial" class="btn btn-warning">Try UnityVS</a></center></p>
+    </div>
+    <div class="span4">&nbsp;</div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <p><i>All computations are done locally, no numbers are sent remotely. Prices are in USD, and include volume licensing for UnityVS Professional.</i></p>
+    </div>
+  </div>
+
+<script>
+function valuesFromParameters(pairs) {
+  for (var i = 0; i < pairs.length; i++) {
+    var pair = pairs[i];
+    var value = urlParam(pair.param);
+    if (value != "")
+      $(pair.id).val(value);
+  }
+}
+
+valuesFromParameters([
+  {param: "yearlyCost", id: "#inputYearlyCost"},
+  {param: "weeks", id: "#inputWeeks"},
+  {param: "hours", id: "#inputHours"},
+  {param: "programmers", id: "#inputProgrammers"},
+  {param: "hoursSaved", id: "#inputHoursSaved"}
+]);
+
+computeSaving();
+
+function bindEvents(inputs) {
+  for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+    input.change(computeSaving);
+    input.keypress(computeSaving);
+    input.keydown(computeSaving);
+    input.keyup(computeSaving);
+    input.select(computeSaving);
+  }
+}
+
+bindEvents([$('#inputYearlyCost'), $('#inputWeeks'), $('#inputHours'), $('#inputProgrammers'), $('#inputHoursSaved')]);
+</script>
+
+</div>

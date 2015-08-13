@@ -1,0 +1,35 @@
+---
+layout: default
+title: Player Debugging
+active: documentation
+---
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="page-header">
+        <h1>Player Debugging</h1>
+      </div>
+
+      <p>Starting with UnityVS 1.2, you can now attach the Visual Studio debugger to Unity players, as long as they're built with the script debugging flag, and they're running on the same network as the UnityVS instance.</p>
+
+      <h3>Build your player with the debugging flag</h3>
+      <p>In the build settings of your Unity project, make sure that both the Development Build and Script debugging checkboxes are checked.</p>
+      <img src="/screen/player-debug.png" />
+      <hr />
+
+      <h3>Configure the Web Player Channel</h3>
+      <p>If you want to debug a Web Player, make sure to right click in the player, and configure the release channel to Development.</p>
+      <p>Note that if you're using Unity 4.2 or above, the "Release Channels" context menu item is now only be visible when the Alt/Option key is pressed when opening the context menu.</p>
+      <img src="/screen/webplayer-dev.png" />
+      <hr />
+
+      <h3>Attach the Unity debugger</h3>
+      <p>Use the Attach Unity debugger entry in the Debug menu of Visual Studio to launch the Unity selection dialog, and click OK to start debugging.</p>
+      <<img src="/screen/attach-unity-debugger.png" />
+      <hr />
+      <img src="/screen/attach-select.png" />
+
+    </div>
+  </div>
+
+</div>

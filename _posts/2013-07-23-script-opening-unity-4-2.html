@@ -1,0 +1,13 @@
+---
+layout: post
+title: Script opening with Unity 4.2
+date: 2013-07-23 18:00:00
+---
+
+<p>Unity 4.2 introduced a new callback that allows you to control how files are opened from Unity.</p>
+
+<p>This is excellent news for UnityVS as it fixes an outstanding known issue: previously, clicking on a console line in Unity would not open the file in UnityVS at the proper line unless <a href="/documentation/issues/">you worked around it</a>.</p>
+
+<p>Until this is supported directly into UnityVS, you can simply drop the following script in a Editor folder of your Unity 4.2 project to make sure that clicking on the console will open UnityVS at the proper line.</p>
+
+<script src="https://gist.github.com/jbevain/6066321.js"></script>

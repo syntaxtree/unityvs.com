@@ -1,0 +1,9 @@
+---
+layout: post
+title: Debugging .NET assemblies
+---
+<p>Today, with the release of <a href="/documentation/changelog/#1.0.4">UnityVS 1.0.4</a>, we added to UnityVS the support for a scenario that is quite common among Unity developers : the ability to debug .NET assemblies from your <b>Asset</b> folder.</p>
+
+<p>Now, whenever you drop a <b>.dll</b> assembly and its matching <b>.pdb</b> file, UnityVS will translate the debug symbols into a format that Unity understands, and you'll be able to step into your .NET assemblies, to view your local variables and your full stack traces.</p>
+
+<p>If you already have such dlls in your <b>Asset</b> folder, after you updated to UnityVS 1.0.4, you just need to reimport the dlls and UnityVS will translate the debug symbols.</p>
