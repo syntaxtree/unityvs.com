@@ -1,0 +1,55 @@
+---
+layout: default
+title: Native support for VSTU 2.1 in Unity 5.2
+active: documentation
+---
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="page-header">
+        <h1>Native support for VSTU 2.1 in Unity 5.2</h1>
+      </div>
+	  
+      <p>Starting with Unity 5.2, the Visual Studio Tools for Unity integrate natively inside Unity, which requires VSTU 2.1.</p>
+	  <p>There is a slight change in the workflow and in the configuration of Unity that this page documents.</p>
+	  <p>The biggest change is that you don't need to import the VSTU Unity package anymore with Unity 5.2. Unity will detect if it's installed, and if so, load it for you. From that point on, VSTU will handle the generation of the project files for Unity, and opening files from Unity will open them inside the VSTU solution.</p>
+	  <p>Unity 5.2 will ignore the VSTU package if it is imported it your project, and will always load VSTU from its installation folder. We encourage you to delete the former UnityVS folder from your Unity 5.2 projects.</p>
+	  <p>The only thing you need to do is to set Unity to use Visual Studio as the external script editor.</p>
+
+      <h3>Set Unity to use Visual Studio.</h3>
+      <p>Just select the Visual Studio version you work with in the External Tools preference of Unity (Edit -> Preferences), and if you have VSTU installed for this version, Unity will load it for you.</p>
+
+      <center><img src="/screen/set-external-tool.png" /></center>
+	  
+	  <p>In this example, Visual Studio 2015 Community is installed as well as the Visual Studio 2015 Tools for Unity.</p>
+	  
+	  <hr />
+	  
+	  <h3>How to check that the native VSTU support is enabled in Unity?</h3>
+      <p>Open the Unity About Window (Help -> About Unity), and check the bottom left corner. You should read that VSTU is enabled.</p>
+	
+      <p class="well">Note: users familiar with VSTU will notice that the "Visual Studio Tools" menu in Unity has been removed as it has now been rendered useless by the native support.</p>
+	  
+	  <center><img src="/screen/unity-about.png" /></center>
+      
+	  <hr />
+
+      <h3>Checklist</h3>
+      <p>Let's go over the steps one more time:</p>
+	  <p>
+	    <ul>
+		  <li>Install Visual Studio and the Visual Studio Tools for Unity.</li>
+		  <li>In Unity, delete the UnityVS folder if you were previously working with VSTU in an older Unity.</li>
+		  <li>In Unity, set Visual Studio to be the external script editor.</li>
+		  <li>In Unity, check that the native VSTU support is enabled in the About Unity window.</li>
+		</ul>
+	  </p>
+	  <p>When you're done with the checklist, opening files in Unity will open Visual Studio where you'll be able to debug your Unity project right away.</p>
+	  
+	  <p class="well">Note: users familiar with VSTU will notice that the solution file and the project files are not prefixed with UnityVS anymore.</p>
+      <hr />
+
+    </div>
+  </div>
+
+</div>
