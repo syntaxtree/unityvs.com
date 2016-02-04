@@ -6,6 +6,40 @@ active: documentation
 <div class="container">
 
   <div class="page-header">
+    <a name="2.2"></a>
+    <h1>2.2</h1>
+  </div>
+  <div class="row">
+    <div class="span2">
+      <h4>2016-02-04</h4>
+      <p><a href="/documentation/changelog/#2.2">permalink</a></p>
+    </div>
+    <div class="span10 categorized">
+      <p>New features:</p>
+      <ul>
+        <li>Wizards: Added support for NetworkBehavior messages in the wizards.</li>
+        <li>Wizards: Added smart search in the Implement MonoBehavior wizard.</li>
+        <li>Wizards: Made wizards context aware; for example, NetworkBehavior messages are only available when working with a NetworkBehavior.</li>
+        <li>UI: Added an option to configure the visibility of MonoBehavior messages.</li>
+        <li>UI: Removed Visual Studio property pages that are not relevent to Unity projects.</li>
+      </ul>
+      <p>Bugs fixes:</p>
+      <ul>
+        <li>Project generation: Fixed references to UnityEngine and UnityEditor on Unity 4.6.</li>
+        <li>Project generation: Fixed generation of project files when Unity is running on OSX.</li>
+        <li>Project generation: Fixed handling of project names containing hashmark (#) characters.</li>
+        <li>Project generation: Restricted generated projects to C# 4.0.</li>
+        <li>Debugger: Fixed an issue with expression evaluation when debugging inside a Unity coroutine.</li>
+        <li>Debugger: Fixed an issue that caused Visual Studio to freeze when debugging.</li>
+        <li>UI: Made the Unity API documentation menu item always visible.</li>
+        <li>UI: Fixed an incompatibility with the Tabs Studio Visual Studio extension.</li>
+        <li>Installer: Support machine-wide installation of VSTU (install for all users) by creating HKLM registry entries.</li>
+        <li>Installer: Fixed issues with uninstallation of VSTU when multiple VSTU versions are installed.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-header">
     <a name="2.1"></a>
     <h1>2.1</h1>
   </div>
