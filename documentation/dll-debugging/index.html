@@ -1,43 +1,10 @@
----
-layout: default
-title: DLL Debugging
-active: documentation
----
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <div class="page-header">
-        <h1>DLL Debugging</h1>
-      </div>
-
-      <p>Many people are writing reusable code components in external DLL files, and deploy them in their Unity project. Using UnityVS, it's also possible to debug them.</p>
-
-      <p class="well">Please note that UnityVS currently only supports debugging managed DLLs. Native C++ DLLs are not supported yet.</p>
-
-      <h3>Add your projects to the UnityVS solution</h3>
-      <p>In Visual Studio, you can add an existing project to the UnityVS generated solution. Starting from UnityVS 1.2, the external project reference will be maintained, even when UnityVS has to regenerate the project files.</p>
-      <img src="/screen/add-existing-project.png" />
-      <hr />
-
-      <h3>Reference the proper Unity framework profile</h3>
-      <p>In Visual Studio, you can change the properties of your class library to target a Unity profile, so you don't risk calling methods that exist in .net 3.5, but that are not in the Mono version that Unity uses. Use the one that maps the level of API compatibily that your project targets.</p>
-      <img src="/screen/external-assembly-target-framework.png" />
-      <hr />
-
-      <h3>Copy the DLL to Unity's Assets folder</h3>
-      <p>
-	  There's two ways to do this. You can either:
-	  <ul>
-	    <li>Directly set the output folder of the project to a folder in the Assets folder of your Unity project.</li>
-		<li>Modify your class library projects to add a MSBuild post build task to copy the output DLL in the Assets folder of your Unity project.
-	  </ul>
-To be able to debug the DLL, the debugger also needs debugging symbols, mapping code locations to source files. When you create a DLL with Visual Studio, it outputs the debugging symbols in a PDB file. For UnityVS to be able to debug your DLL, you must copy the PDB file along. The UnityVS package will use the information from the DLL and the PDB to create a .DLL.MDB file that is the debug symbol format used by Unity's scripting engine.	  
-	</p>
-
-      <h3>Debug your code</h3>
-      <p>You can now put breakpoints in your DLL code in the UnityVS solution, and start the debugger.</p>
-
-    </div>
-  </div>
-
-</div>
+<html xmlns="http://www.w3.org/1999/xhtml">    
+  <head>
+    <title>UnityVS</title>
+    <meta http-equiv="refresh" content="0;URL='https://docs.microsoft.com/en-us/visualstudio/cross-platform/using-visual-studio-tools-for-unity#debugging-a-dll-in-your-unity-project'" />
+    <link rel="canonical" href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/using-visual-studio-tools-for-unity#debugging-a-dll-in-your-unity-project" />
+  </head>    
+  <body> 
+    <p>This page has moved to a <a href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/using-visual-studio-tools-for-unity#debugging-a-dll-in-your-unity-project">https://docs.microsoft.com/en-us/visualstudio/cross-platform/using-visual-studio-tools-for-unity#debugging-a-dll-in-your-unity-project</a>.</p>
+  </body>
+</html>
