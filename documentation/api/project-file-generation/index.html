@@ -1,56 +1,10 @@
----
-layout: default
-title: Project File Generation
-active: documentation
----
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <div class="page-header">
-        <h1>Project File Generation</h1>
-      </div>
-
-      <p>You can interact with how Visual Studio Tools for Unity generates project files by using the Unity style callback ProjectFileGeneration.</p>
-{% highlight csharp %}
-using System;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
-
-using UnityEngine;
-using UnityEditor;
-
-using SyntaxTree.VisualStudio.Unity.Bridge;
-
-[InitializeOnLoad]
-public class ProjectFileHook
-{
-    // necessary for XLinq to save the xml project file in utf8
-    class Utf8StringWriter : StringWriter
-    {
-        public override Encoding Encoding
-        {
-            get { return Encoding.UTF8; }
-        }
-    }
-
-    static ProjectFileHook()
-    {
-        ProjectFilesGenerator.ProjectFileGeneration += (string name, string content) =>
-        {
-            var document = XDocument.Parse(content);
-            document.Root.Add(new XComment("FIX ME"));
-
-            var str = new Utf8StringWriter();
-            document.Save(str);
-
-            return str.ToString();
-        };
-    }
-}
-{% endhighlight %}
-    </div>
-  </div>
-
-</div>
+<html xmlns="http://www.w3.org/1999/xhtml">    
+  <head>
+    <title>UnityVS</title>
+    <meta http-equiv="refresh" content="0;URL='https://docs.microsoft.com/en-us/visualstudio/cross-platform/customize-project-files-created-by-vstu'" />
+    <link rel="canonical" href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/customize-project-files-created-by-vstu" />
+  </head>    
+  <body> 
+    <p>This page has moved to a <a href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/customize-project-files-created-by-vstu">https://docs.microsoft.com/en-us/visualstudio/cross-platform/customize-project-files-created-by-vstu</a>.</p>
+  </body>
+</html>
