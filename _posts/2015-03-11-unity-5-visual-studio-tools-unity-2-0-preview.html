@@ -1,52 +1,10 @@
----
-layout: post
-title: Unity 5 and Visual Studio Tools for Unity 2.0 Preview
-date: 2015-03-11 16:00:00
----
-<p>Unity 5 was released last week at GDC, and it comes with a few changes from Unity 4.</p>
-
-<p>The Visual Studio Tools for Unity 2.0 will support Unity 5 completely, in the meantime there's
-a few actions you can do to have the Visual Studio Tools for Unity 2.0 Preview work nicely with Unity 5.</p>
-
-<h3>Visual Studio Tools Unity Package</h3>
-<br/>
-<center><img src="http://i.imgur.com/dT87odk.png" width="300"/></center><br/>
-
-<p>The first thing that you'll notice is that you don't find the Visual Studio Tools package in the Import Package menu.</p>
-
-<p>You can easily import the Visual Studio Tools package by importing it manually. Chose Import Custom Package, and select our package
-from:</p>
-<br/>
-<blockquote>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\2013\</blockquote>
-<br/>
-<p>Alternatively, if you have the Administrator rights on your machine you can copy the package to:</p>
-<br/>
-<blockquote>C:\Program Files\Unity\Editor\Standard Assets\</blockquote>
-<br/>
-<p>And you'll find it in the Import Package menu next time you need it.</p>
-
-<h3>File Opening</h3>
-<br/>
-
-<p>To properly open your scripts from Unity, you need to change the External Editor to our file opener.</p>
-
-<p>In Unity, go to the menu Edit -> Preferences, and in the External Tools tab, change the file opener to:</p>
-<br/>
-<blockquote>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\2013\UnityVS.OpenFile.exe</blockquote>
-<br/>
-<img src="http://i.imgur.com/KOw204j.png"/>
-<br/><br/>
-
-<h3>Known issue</h3>
-<br/>
-
-<p>Unity 5 changed the path to the tool named pdb2mdb that we're using to convert .NET debug symbols to the Mono debug symbols that
-Unity understands. You need to invoke the tool yourself on your dll and pdb files if you want to debug custom dll files.</p>
-
-<p>Run the command:</p>
-
-<br/>
-<blockquote>C:\>"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\cli.bat" "C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5\pdb2mdb.exe" Path\To\MyCustomAssembly.dll</blockquote>
-<br/>
-
-<p>Replace Path\To\MyCustomAssembly.dll by the actual path to your dll file (the .pdb needs to be located in the same folder), and this will generate a mdb file. Just copy the dll and the mdb file in the Assets folder and you'll be able to debug the code from Visual Studio.</p>
+<html xmlns="http://www.w3.org/1999/xhtml">    
+  <head>
+    <title>UnityVS</title>
+    <meta http-equiv="refresh" content="0;URL='https://blogs.msdn.microsoft.com/visualstudio/tag/unity/'" />
+    <link rel="canonical" href="https://blogs.msdn.microsoft.com/visualstudio/tag/unity/" />
+  </head>    
+  <body> 
+    <p>This page has moved to a <a href="https://blogs.msdn.microsoft.com/visualstudio/tag/unity/">https://blogs.msdn.microsoft.com/visualstudio/tag/unity/</a>.</p>
+  </body>
+</html>
