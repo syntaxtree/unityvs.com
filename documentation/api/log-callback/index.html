@@ -1,38 +1,10 @@
----
-layout: default
-title: Log Callback
-active: documentation
----
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <div class="page-header">
-        <h1>Log Callback</h1>
-      </div>
-
-      <p>Visual Studio Tools for Unity registers its own log callback to be able to stream the Unity console to Visual Studio. If you have editor scripts that were previously registering their own callback, we can all work together if you plug into our own log callback.</p>
-
-{% highlight csharp %}
-using System;
-
-using UnityEngine;
-using UnityEditor;
-
-using SyntaxTree.VisualStudio.Unity.Bridge;
-
-[InitializeOnLoad]
-public class LogCallbackHook
-{
-    static LogCallbackHook()
-    {
-        VisualStudioIntegration.LogCallback += (string condition, string trace, LogType type) =>
-        {
-            // ...
-        };
-    }
-}
-{% endhighlight %}
-    </div>
-  </div>
-
-</div>
+<html xmlns="http://www.w3.org/1999/xhtml">    
+  <head>
+    <title>UnityVS</title>
+    <meta http-equiv="refresh" content="0;URL='https://docs.microsoft.com/en-us/visualstudio/cross-platform/share-the-unity-log-callback-with-vstu'" />
+    <link rel="canonical" href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/share-the-unity-log-callback-with-vstu" />
+  </head>    
+  <body> 
+    <p>This page has moved to a <a href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/share-the-unity-log-callback-with-vstu">https://docs.microsoft.com/en-us/visualstudio/cross-platform/share-the-unity-log-callback-with-vstu</a>.</p>
+  </body>
+</html>
