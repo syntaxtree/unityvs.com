@@ -1,44 +1,10 @@
----
-layout: default
-title: Known issues
-active: documentation
----
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <div class="page-header">
-        <h1>Known issues</h1>
-      </div>
-
-      <ul>
-        <li>When being debugged, Unity's scripting engine is known to crash occasionally. Unity uses an old version of their scripting engine.</li>
-        <li>When being debugged, Unity can freeze. This is also related to the fact that their scripting engine is an old version which is prone to deadlocks. If this freezes Visual Studiot too, please apply </li>
-        <li>Stepping in and out of methods is sometimes capricious, especially in iterators or within switch statements. Again, this is related to the fact that Unity's C# compiler is an old version.</li>
-      </ul>
-
-      <p>For all issues that can not be addressed or worked around from VSTU, we're collaborating upstream to ensure they're fixed.</p>
-      <p>Please report all crashes. Thanks!</p>
-
-      <div class="page-header">
-        <h1>What to do when Visual Studio locks up?</h1>
-      </div>
-
-      <p>We've had reports that Visual Studio sometimes locks up when debugging. We need data to help fix those. Here's what you can do to help us whenever Visual Studio is locked up.</p>
-
-      <ul>
-        <li>Open another Visual Studio instance,</li>
-        <li>In the new Visual Studio instance, do Tools -> Attach to Process,</li>
-        <li>Select and attach the debugger to the Visual Studio instance that is locked up,</li>
-        <li>Pause the debugger,</li>
-        <li>Go to the Commands window pane, if you don't have go to View -> Other Windows -> Command Window,</li>
-        <li>In the Command window pane input the command: <pre>Debug.ListCallStack /AllThreads /ShowExternalCode</pre></li>
-        <li>Send us the whole thread dump, along with a description of when the lock up at <a href="mailto:vstusp@microsoft.com">vstusp@microsoft.com</a>,</li>
-      </ul>
-
-      <p>This will help us investigate and fix those issues.</p>
-
-    </div>
-
-  </div>
-
-</div>
+<html xmlns="http://www.w3.org/1999/xhtml">    
+  <head>
+    <title>UnityVS</title>
+    <meta http-equiv="refresh" content="0;URL='https://docs.microsoft.com/en-us/visualstudio/cross-platform/troubleshooting-and-known-issues-visual-studio-tools-for-unity'" />
+    <link rel="canonical" href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/troubleshooting-and-known-issues-visual-studio-tools-for-unity" />
+  </head>    
+  <body> 
+    <p>This page has moved to a <a href="https://docs.microsoft.com/en-us/visualstudio/cross-platform/troubleshooting-and-known-issues-visual-studio-tools-for-unity">https://docs.microsoft.com/en-us/visualstudio/cross-platform/troubleshooting-and-known-issues-visual-studio-tools-for-unity</a>.</p>
+  </body>
+</html>
